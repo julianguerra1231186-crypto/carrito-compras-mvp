@@ -5,6 +5,6 @@ CREATE TABLE detalle_factura (
                                  cantidad INT NOT NULL,
                                  precio_unitario DECIMAL(10,2) NOT NULL,
                                  subtotal DECIMAL(10,2) NOT NULL,
-                                 CONSTRAINT fk_detalle_factura FOREIGN KEY (factura_id) REFERENCES factura(id),
-                                 CONSTRAINT fk_detalle_producto FOREIGN KEY (producto_id) REFERENCES producto(id)
+                                 CONSTRAINT fk_detalle_factura_factura FOREIGN KEY (factura_id) REFERENCES factura(id),
+                                 CONSTRAINT fk_detalle_factura_producto FOREIGN KEY (producto_id) REFERENCES producto(id)
 );

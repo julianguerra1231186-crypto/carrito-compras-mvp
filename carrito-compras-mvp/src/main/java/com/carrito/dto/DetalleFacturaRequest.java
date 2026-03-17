@@ -6,15 +6,18 @@ import lombok.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class DetalleFacturaRequest {
 
-    @NotNull
+    @NotNull(message = "La factura es obligatoria")
     private Long facturaId;
 
-    @NotNull
+    @NotNull(message = "El producto es obligatorio")
     private Long productoId;
 
-    @NotNull
-    @Min(1)
+    @NotNull(message = "La cantidad es obligatoria")
+    @Min(value = 1, message = "La cantidad debe ser mayor a cero")
     private Integer cantidad;
 }
