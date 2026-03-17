@@ -146,20 +146,27 @@ Estas historias serán detalladas en el documento `docs/historias_usuario.md`.
 
 ---
 
-## 10. Estado actual
+## 10. Historias de usuario implementadas
 
-Actualmente el proyecto se encuentra en etapa de planeación documental inicial. En esta fase se está definiendo:
-
-- el alcance del MVP
-- la estructura de documentación
-- las historias de usuario
-- el flujo de ramas y ambientes
-
-La implementación funcional comenzará una vez esté consolidada la base documental.
+- HU-01 Crear usuario
+- HU-02 Crear producto
+- HU-03 Crear factura
+- HU-04 Crear detalle de factura
 
 ---
 
-## 11. Ejecución esperada del proyecto
+## 11. Estado actual del proyecto
+
+Actualmente el proyecto cuenta con los siguientes módulos implementados:
+
+- Gestión de usuarios
+- Gestión de productos
+- Gestión de facturas
+- Gestión de detalle de factura
+
+---
+
+## 12. Ejecución esperada del proyecto
 
 La meta de esta primera entrega es contar con un backend funcional que permita demostrar:
 
@@ -173,6 +180,19 @@ La meta de esta primera entrega es contar con un backend funcional que permita d
 
 ---
 
-## 12. Autoría
+## 13. Autoría
 
 Proyecto académico individual desarrollado como evidencia práctica de construcción de software backend, documentación y control de versiones.
+
+---
+
+## 14. Flujo de ambientes
+
+El proyecto simula tres ambientes de trabajo:
+
+- `develop` → ambiente DEV
+- `qa` → ambiente QA
+- `main` → ambiente MAIN
+
+Flujo aplicado:
+`feature/* -> develop -> qa -> main`
