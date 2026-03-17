@@ -53,15 +53,16 @@ Cada historia incluye una descripción breve y criterios de aceptación básicos
 
 ### HU-02 — Crear producto
 
-**Como** administrador del sistema  
-**Quiero** registrar productos  
-**Para** disponer de un catálogo básico que pueda ser utilizado en la facturación.
+**Como** administrador del sistema
+**Quiero** registrar productos
+**Para** que puedan ser usados posteriormente en la generación de facturas.
 
 #### Criterios de aceptación
-- El sistema debe permitir crear un producto.
-- El producto debe registrar información básica como nombre, precio y stock.
-- El sistema debe validar que los valores numéricos no sean inválidos.
-- El producto debe quedar almacenado correctamente.
+- Se debe poder crear un producto.
+- El producto debe tener nombre, precio y stock.
+- El precio no puede ser negativo.
+- El stock no puede ser negativo.
+- El producto debe poder consultarse en un listado.
 
 ---
 
