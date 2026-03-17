@@ -104,3 +104,21 @@ El orden de implementación recomendado para este MVP es el siguiente:
 4. **HU-04 — Crear detalle de factura**
 
 Este orden permite respetar dependencias funcionales, ya que primero deben existir clientes y productos antes de registrar facturas y sus detalles.
+
+---
+
+# Estado de Historias de Usuario
+
+| Código | Historia de Usuario | Estado |
+|--------|----------------------|--------|
+| HU-01 | Crear usuario | Implementada |
+| HU-02 | Crear producto | Implementada |
+| HU-03 | Crear factura | Implementada |
+| HU-04 | Crear detalle de factura | Implementada |
+
+# Trazabilidad de implementación
+
+- HU-01: implementada en la rama `feature/hu-01-usuarios`
+- HU-02: implementada en la rama `feature/hu-02-productos`
+- HU-03: implementada en la rama `feature/hu-03-facturas`
+- HU-04: implementada en la rama `feature/hu-04-detalle-factura`
