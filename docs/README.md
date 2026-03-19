@@ -15,8 +15,8 @@
 - [4. Tecnologías utilizadas](#4-tecnologías-utilizadas)
 - [5. Módulos del MVP](#5-módulos-del-mvp)
 - [6. Estructura documental](#6-estructura-documental)
-- [7. Flujo de trabajo con Git y GitHub](#7-flujo-de-trabajo-con-git-y-github)
-- [8. Ambientes del proyecto](#8-ambientes-del-proyecto)
+- [7. Flujo de trabajo por Historias de Usuario](#7-flujo-de-trabajo-por-historias-de-usuario)
+- [8. Flujo general de ambientes](#8-flujo-general-de-ambientes)
 - [9. Historias de Usuario relacionadas](#9-historias-de-usuario-relacionadas)
 - [10. Estado actual](#10-estado-actual)
 - [11. Ejecución esperada del proyecto](#11-ejecución-esperada-del-proyecto)
@@ -96,38 +96,51 @@ Posteriormente podrán agregarse otros documentos como weekly, evidencias de Git
 
 ---
 
-## 7. Flujo de trabajo con Git y GitHub
+## 7. Flujo de trabajo por Historias de Usuario
 
-Para este proyecto se utilizará una estrategia simple basada en ramas que represente el paso por ambientes:
+El proyecto se organizó inicialmente por historias de usuario en ramas funcionales independientes. A partir de cada una de estas ramas base, se generaron tres ramas derivadas para representar el ciclo de vida de cada funcionalidad:
 
-- `develop` → ambiente de desarrollo
-- `qa` → ambiente de validación
-- `main` → ambiente final o liberación
+- rama de desarrollo (`-dev`)
+- rama de pruebas (`-qa`)
+- rama de liberación (`-release`)
 
-Las funcionalidades se trabajarán en ramas `feature/*`, por ejemplo:
+Este enfoque permitió modelar de forma más precisa el proceso de construcción, validación y preparación de cada historia de usuario antes de su integración final.
 
-- `feature/documentacion-mvp`
+### Ejemplo de flujo por historia de usuario
+
+#### HU-01 Usuarios
 - `feature/hu-01-usuarios`
+- `feature/hu-01-usuarios-dev`
+- `feature/hu-01-usuarios-qa`
+- `feature/hu-01-usuarios-release`
+
+#### HU-02 Productos
 - `feature/hu-02-productos`
+- `feature/hu-02-productos-dev`
+- `feature/hu-02-productos-qa`
+- `feature/hu-02-productos-release`
+
+#### HU-03 Facturas
 - `feature/hu-03-facturas`
+- `feature/hu-03-facturas-dev`
+- `feature/hu-03-facturas-qa`
+- `feature/hu-03-facturas-release`
+
+#### HU-04 Detalle de factura
 - `feature/hu-04-detalle-factura`
+- `feature/hu-04-detalle-factura-dev`
+- `feature/hu-04-detalle-factura-qa`
+- `feature/hu-04-detalle-factura-release`
 
-Cada funcionalidad deberá desarrollarse en su propia rama, integrarse primero en `develop`, luego validarse en `qa` y finalmente promoverse a `main`.
+## 8. Flujo general de ambientes
 
----
+Además de las ramas por historia de usuario, el proyecto manejó tres ramas principales para simular ambientes de trabajo:
 
-## 8. Ambientes del proyecto
+- `develop` → ambiente de desarrollo general
+- `qa` → ambiente de pruebas integradas
+- `main` → ambiente final o liberación principal
 
-### DEV
-Ambiente destinado al desarrollo activo de nuevas funcionalidades.
-
-### QA
-Ambiente destinado a la revisión y validación de las funcionalidades implementadas.
-
-### MAIN
-Ambiente final que representa la versión estable del proyecto.
-
-Este flujo permitirá simular de manera académica un proceso básico de promoción de cambios entre ambientes.
+De esta forma, cada historia de usuario cuenta con su propio flujo interno y, posteriormente, las funcionalidades validadas se agrupan para su promoción entre ambientes.
 
 ---
 
