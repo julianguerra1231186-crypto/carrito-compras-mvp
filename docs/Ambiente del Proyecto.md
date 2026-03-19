@@ -1,100 +1,85 @@
-# 🌐 Ambientes del Proyecto
+# 🌿 Ambientes del Proyecto
 
 ## 📑 Índice
 
-- [1. Propósito](#1-propósito)
-- [2. Ambientes definidos](#2-ambientes-definidos)
-  - [DEV](#dev)
+- [1. Descripción general](#1-descripción-general)
+- [2. Ambientes principales](#2-ambientes-principales)
+  - [DEV](#develop)
   - [QA](#qa)
   - [MAIN](#main)
-- [3. Flujo de promoción](#3-flujo-de-promoción)
-- [4. Relación con ramas](#4-relación-con-ramas)
-- [5. Objetivo académico del flujo](#5-objetivo-académico-del-flujo)
+- [3. Flujo por Historias de Usuario](#3-flujo-por-historias-de-usuario)
+- [4. Interpretación del flujo](#4-interpretación-del-flujo)
+- [5. Propósito metodológico](#5-propósito-metodológico)
 
 ---
 
-## 1. Propósito
+# 🌿 Ambientes del Proyecto – Carrito de Compras MVP
 
-Este documento describe la forma en que se simularán los ambientes del proyecto **Carrito de Compras MVP**. Su propósito es mostrar un flujo ordenado de desarrollo, validación y liberación, siguiendo un esquema básico de promoción de cambios entre ramas.
+## 1. Descripción general
 
----
-
-## 2. Ambientes definidos
-
-### DEV
-
-El ambiente **DEV** representa el espacio principal de desarrollo. En este ambiente se integran las funcionalidades construidas en ramas `feature/*` una vez cada módulo ha sido trabajado de forma individual.
-
-En este proyecto, el ambiente DEV estará representado por la rama:
-
-```text
-develop
-```
+El proyecto fue organizado utilizando una estrategia de ramas que permitió representar tanto los ambientes generales del sistema como el ciclo de vida individual de cada historia de usuario.
 
 ---
 
-### QA
+## 2. Ambientes principales
 
-El ambiente **QA** representa el espacio de validación funcional. Aquí se revisa que los módulos integrados en desarrollo funcionen de manera correcta antes de considerar una liberación final.
+### develop
+Corresponde al ambiente de desarrollo general del proyecto. En esta rama se consolidan las funcionalidades que ya fueron trabajadas en sus respectivas ramas funcionales.
 
-En este proyecto, el ambiente QA estará representado por la rama:
+### qa
+Corresponde al ambiente de pruebas. Aquí se valida el comportamiento integrado del sistema antes de la liberación final.
 
-```text
-qa
-```
-
----
-
-### MAIN
-
-El ambiente **MAIN** representa la versión estable o final del proyecto. A esta rama solo deben llegar funcionalidades previamente integradas y validadas.
-
-En este proyecto, el ambiente MAIN estará representado por la rama:
-
-```text
-main
-```
+### main
+Corresponde al ambiente principal o final del proyecto. En esta rama se publica la versión consolidada del sistema.
 
 ---
 
-## 3. Flujo de promoción
+## 3. Flujo por Historias de Usuario
 
-El flujo definido para este proyecto será el siguiente:
+Cada historia de usuario fue trabajada inicialmente en una rama funcional independiente y, posteriormente, se complementó con tres ramas derivadas que representan su ciclo interno:
 
-```text
-feature/* → develop → qa → main
-```
+- rama `-dev`: etapa de desarrollo de la historia de usuario
+- rama `-qa`: etapa de validación de la historia de usuario
+- rama `-release`: etapa de preparación o liberación de la historia de usuario
 
-Esto significa que:
+### Ejemplo
 
-1. Cada funcionalidad se desarrolla en una rama independiente `feature/*`.
-2. Cuando una funcionalidad está terminada, se integra en `develop`.
-3. Una vez validadas varias funcionalidades en desarrollo, los cambios se promueven a `qa`.
-4. Después de la validación final, el proyecto se promueve a `main`.
-
----
-
-## 4. Relación con ramas
-
-Las ramas iniciales propuestas para el proyecto son:
-
-- `feature/documentacion-mvp`
+#### HU-01 Usuarios
 - `feature/hu-01-usuarios`
-- `feature/hu-02-productos`
-- `feature/hu-03-facturas`
-- `feature/hu-04-detalle-factura`
+- `feature/hu-01-usuarios-dev`
+- `feature/hu-01-usuarios-qa`
+- `feature/hu-01-usuarios-release`
 
-Estas ramas permiten separar el trabajo por entregables y mantener trazabilidad entre la funcionalidad desarrollada y su integración posterior.
+#### HU-02 Productos
+- `feature/hu-02-productos`
+- `feature/hu-02-productos-dev`
+- `feature/hu-02-productos-qa`
+- `feature/hu-02-productos-release`
+
+#### HU-03 Facturas
+- `feature/hu-03-facturas`
+- `feature/hu-03-facturas-dev`
+- `feature/hu-03-facturas-qa`
+- `feature/hu-03-facturas-release`
+
+#### HU-04 Detalle de factura
+- `feature/hu-04-detalle-factura`
+- `feature/hu-04-detalle-factura-dev`
+- `feature/hu-04-detalle-factura-qa`
+- `feature/hu-04-detalle-factura-release`
 
 ---
 
-## 5. Objetivo académico del flujo
+## 4. Interpretación del flujo
 
-La simulación de ambientes en este proyecto tiene un propósito académico y formativo. Busca evidenciar:
+Esta organización permite entender que cada funcionalidad tiene su propio recorrido de construcción, validación y preparación antes de formar parte del flujo general del proyecto.
 
-- organización del trabajo por etapas
-- uso correcto de ramas en Git y GitHub
-- validación previa antes de liberar cambios
-- disciplina en el proceso de desarrollo
+Posteriormente, las funcionalidades ya consolidadas pasan por la ruta principal del sistema:
 
-Este enfoque permite presentar el proyecto no solo como una implementación técnica, sino también como un ejercicio de buenas prácticas de trabajo con control de versiones.
+`develop -> qa -> main`
+
+---
+
+## 5. Propósito metodológico
+
+El uso de ramas por historia de usuario y ramas principales por ambiente permitió simular un proceso de trabajo más cercano a un entorno real de desarrollo, separando responsabilidades y dejando trazabilidad del avance del proyecto.

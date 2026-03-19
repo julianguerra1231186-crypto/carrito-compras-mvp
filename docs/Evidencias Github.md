@@ -1,7 +1,6 @@
 # 📸 Evidencias de GitHub -- Carrito de Compras MVP
 
-Este documento registra las evidencias del flujo de trabajo realizado en
-GitHub para el desarrollo del proyecto.
+Este documento registra las evidencias del flujo de trabajo realizado en GitHub para el desarrollo del proyecto. La estrategia utilizada combinó ramas principales por ambiente y ramas específicas por historia de usuario, incluyendo sus etapas de desarrollo, QA y release.
 
 ------------------------------------------------------------------------
 
@@ -119,3 +118,16 @@ desarrollo al ambiente de pruebas.
 
 En esta evidencia se observa la liberación final del MVP al ambiente
 principal.
+
+---
+
+# 10. Flujo derivado por Historias de Usuario
+
+## Evidencia sugerida
+
+![PR #8](docs/img/PR10.png)
+
+## Descripción
+En esta evidencia se observa que cada historia de usuario fue complementada con ramas derivadas para representar sus etapas de desarrollo, validación y liberación. Esto permite demostrar que cada funcionalidad tuvo su propio ciclo de vida dentro del proyecto.
+
+---
