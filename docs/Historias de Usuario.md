@@ -10,6 +10,7 @@
   - [HU-03 Crear factura](#hu-03--crear-factura)
   - [HU-04 Crear detalle de factura](#hu-04--crear-detalle-de-factura)
 - [4. Priorización](#4-priorización)
+- [5. Estructura de ramas por historia de usuario](#5-estructura-de-ramas-por-historia-de-usuario)
 
 ---
 
@@ -122,3 +123,33 @@ Este orden permite respetar dependencias funcionales, ya que primero deben exist
 - HU-02: implementada en la rama `feature/hu-02-productos`
 - HU-03: implementada en la rama `feature/hu-03-facturas`
 - HU-04: implementada en la rama `feature/hu-04-detalle-factura`
+
+---
+
+# 5. Estructura de ramas por Historia de Usuario
+
+Cada historia de usuario fue trabajada inicialmente en una rama funcional base y posteriormente complementada con ramas derivadas para reflejar sus etapas de desarrollo, pruebas y liberación.
+
+## HU-01 Crear usuario
+- `feature/hu-01-usuarios`
+- `feature/hu-01-usuarios-dev`
+- `feature/hu-01-usuarios-qa`
+- `feature/hu-01-usuarios-release`
+
+## HU-02 Crear producto
+- `feature/hu-02-productos`
+- `feature/hu-02-productos-dev`
+- `feature/hu-02-productos-qa`
+- `feature/hu-02-productos-release`
+
+## HU-03 Crear factura
+- `feature/hu-03-facturas`
+- `feature/hu-03-facturas-dev`
+- `feature/hu-03-facturas-qa`
+- `feature/hu-03-facturas-release`
+
+## HU-04 Crear detalle de factura
+- `feature/hu-04-detalle-factura`
+- `feature/hu-04-detalle-factura-dev`
+- `feature/hu-04-detalle-factura-qa`
+- `feature/hu-04-detalle-factura-release`
